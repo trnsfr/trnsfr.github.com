@@ -1,0 +1,187 @@
+html,body {
+  margin: 0;
+  padding: 0;
+}
+body {
+	font-family:"Open Sans", Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 50px 0 0 0;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  span {
+    color: #666;
+  }
+}
+
+.apps {
+  .app {
+    background-color: #eee;
+    color: #fff;
+    padding-top: 20px;
+    text-align: center;
+    overflow: hidden;
+    
+    .app-info {
+      padding-top: 40px;
+      .icon {
+        background-size: 150px 150px;
+        height: 150px;
+        width: 150px;
+      }
+      h2 {
+        font-family: Montserrat, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        text-shadow: rgba(0,0,0,0.3) 0 2px 0;
+        margin: 0px 0 10px;
+        padding: 0;
+      }
+      h3 {
+        font-family: Montserrat, sans-serif;
+        font-size: 18px;
+        text-shadow: rgba(0,0,0,0.3) 0 1px 0;
+        margin: 0 0 1em 0;
+        padding: 0;
+      }
+      .appstore {
+        background-image: url(../img/appstore.png);
+        background-size: 190px 62px;
+        display: block;
+        height: 62px;
+        margin: 0 auto;
+        width: 190px;
+        opacity: 0;
+      }
+    }
+    .iphone {
+      background-image: url(../img/iphone.png);
+      background-repeat: no-repeat;
+      height: 330px;
+      margin: 20px auto 0 auto;
+      position: relative;
+      width: 272px;
+      .screenshot {
+        background-size: 236px 400px;
+        bottom: 0;
+        display: block;
+        height: 253px;
+        left: 21px;
+        position: absolute;
+        width: 236px;
+      }
+    }
+    .ipad {
+      background-image: url(../img/ipad-side.png);
+      background-repeat: no-repeat;
+      height: 330px;
+      margin: 20px auto 0 auto;
+      position: relative;
+      width: 460px;
+      .screenshot {
+        background-repeat: no-repeat;
+        background-size: 366px 289px;
+        bottom: 0;
+        display: block;
+        height: 289px;
+        left: 48px;
+        position: absolute;
+        width: 366px;
+      }
+    }
+    &.campy { background-color: #E3EBB3; }
+    &.down  { background-color: #0ACA6F; }
+    &.moovee{ background-color: #333; }
+    &.letterplay { background-color: #FA9293; }
+    &.instavue { background-color: #AB967D; }
+    &.sfpt { background-color: #ccc; }
+    &.tidytide { background-color: #333; }
+    
+    &.campy      .screenshot { background-image: url(../img/screenshots/campy.png); }
+    &.down       .screenshot { background-image: url(../img/screenshots/down.png); }
+    &.moovee     .screenshot { background-image: url(../img/screenshots/moovee.png); }
+    &.letterplay .screenshot { background-image: url(../img/screenshots/letterplay.png); }
+    &.instavue   .screenshot { background-image: url(../img/screenshots/instavue.png); }
+    &.tidytide   .screenshot { background-image: url(../img/screenshots/tidytide.png); }
+    &.sfpt       .screenshot { background-image: url(../img/screenshots/sfpt.png); }
+  }
+}
+
+.apps .app {
+  .iphone, .ipad, .icon, .app-info, .screenshot {
+    -webkit-transition: all 0.5s ease;
+  	-moz-transition: all 0.5s ease;
+  	-o-transition: all 0.5s ease;
+  	transition: all 0.5s ease;
+  }
+  .icon {
+    -webkit-transform: scale(0.9);
+       -moz-transform: scale(0.9);
+         -o-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  .appstore {
+    -webkit-transition: opacity 0.5s ease-in-out;
+       -moz-transition: opacity 0.5s ease-in-out;
+         -o-transition: opacity 0.5s ease-in-out;
+        -ms-transition: opacity 0.5s ease-in-out;
+            transition: opacity 0.5s ease-in-out;
+  }
+  
+  &:hover .app-info {
+    padding-top: 80px;
+  }
+  &:hover .appstore {
+    opacity: 1.0;
+  }
+  &:hover .iphone, &:hover .ipad {
+    height: 380px;
+    margin-top: 40px;
+  }
+  &:hover .iphone .screenshot {
+    height: 303px;
+  }
+  &:hover .ipad .screenshot {
+    margin-bottom: 50px;
+  }
+  &:hover .icon {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    /*
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+            */
+  }
+}
+
+@media (min-width: 768px) {
+  .me {
+    background-image: url(../img/avatar.png);
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+    background-size: 30px 30px;
+    padding-left: 40px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body { padding-top: 0; }
+  .app-info {
+    padding-top: 0 !important;
+  }
+  .navbar-fixed-top {
+    position: relative;
+    top: auto;
+    margin: 0;
+  }
+  .appstore {
+    opacity: 1 !important;
+  }
+}
+
+.row, .navbar-nav { margin-right: 0; margin-left: 0; }
