@@ -15,6 +15,10 @@ body {
   }
 }
 
+.label.label-primary {
+  background-color: #333;
+}
+
 .hiring {
   background-color: #000;
   color: #ccc;
@@ -29,7 +33,7 @@ body {
     padding-top: 20px;
     text-align: center;
     overflow: hidden;
-    
+
     .app-info {
       padding-top: 40px;
       .icon {
@@ -107,12 +111,27 @@ body {
     &.sfpt       { background-color: #ccc; }
     &.tidytide   { background-color: #333; }
     &.dubbble    { background-color: #FEA8CA; }
-    &.podium     {
+    &.bot        {
+      background-color: #BD10E0;
+    }
+    &.wut {
+      background-color: #E8B1A5;
+      background-image: url(../img/wut-bg.png);
+      background-size: cover;
+      background-position: center center;
+    }
+    &.peak {
+      background-color: #25B8AD;
+      background-image: url(../img/peak-bg.jpg);
+      background-size: cover;
+      background-position: center center;
+    }
+    &.podium {
       background-color: #25B8AD;
       background-image: url(../img/podium-bg.png);
       background-size: 25px 25px
     }
-    
+
     &.luna       .screenshot { background-image: url(../img/screenshots/luna.png); }
     &.yogabuddy  .screenshot { background-image: url(../img/screenshots/yogabuddy.png); }
     &.campy      .screenshot { background-image: url(../img/screenshots/campy.png); }
@@ -124,6 +143,9 @@ body {
     &.sfpt       .screenshot { background-image: url(../img/screenshots/sfpt.png); }
     &.dubbble    .screenshot { background-image: url(../img/screenshots/dubbble.png); }
     &.podium     .screenshot { background-image: url(../img/screenshots/podium.png); }
+    &.wut        .screenshot { background-image: url(../img/screenshots/wut.png); }
+    &.peak       .screenshot { background-image: url(../img/screenshots/peak.png); }
+    &.bot        .screenshot { background-image: url(../img/screenshots/bot.png); }
   }
 }
 
@@ -148,7 +170,7 @@ body {
         -ms-transition: opacity 0.5s ease-in-out;
             transition: opacity 0.5s ease-in-out;
   }
-  
+
   &:hover .app-info {
     padding-top: 80px;
   }
@@ -178,7 +200,7 @@ body {
             transform: rotate(360deg);
             */
   }
-  
+
   .iphone:hover {
     height: 470px;
     margin-top: -50px;
@@ -195,6 +217,7 @@ body {
     background-position: 0 10px;
     background-size: 30px 30px;
     padding-left: 40px !important;
+    border-radius: 50%;
   }
 }
 
